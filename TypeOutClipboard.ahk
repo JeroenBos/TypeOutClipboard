@@ -5,6 +5,8 @@ SetKeyDelay, 0
         clipboardCopy = %clipboard%
         truncatedCopy := SubStr(clipboardCopy, 1)
         truncatedCopy := StrReplace(truncatedCopy, "`r`n", "`n")
+        truncatedCopy := LTrim(truncatedCopy, OmitChars := "r`n")
+        truncatedCopy := RTrim(truncatedCopy, OmitChars := " `t`r`n")
         Send {Raw}%truncatedCopy%
     }
 Return
