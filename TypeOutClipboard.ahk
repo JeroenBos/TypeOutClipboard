@@ -1,4 +1,5 @@
 SetKeyDelay, 0
+^Ins::
 ^!v::	
     if DllCall("IsClipboardFormatAvailable", "Uint", 7) {
         clipboardCopy = %clipboard%
