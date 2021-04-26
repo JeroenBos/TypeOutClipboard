@@ -3,6 +3,6 @@ SetKeyDelay, 0
     if DllCall("IsClipboardFormatAvailable", "Uint", 7) {
         clipboardCopy = %clipboard%
         truncatedCopy := SubStr(clipboardCopy, 1)
-        Send %truncatedCopy%
+        Send {Raw}%truncatedCopy%
     }
 Return
